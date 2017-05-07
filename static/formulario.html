@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <title>MiniGear</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MiniGear</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav" style="display:inline-block;">
+                    <li><a href="formulario.html">Agregar articulos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="/formulario" method="POST" enctype="multipart/form-data" style="padding-top: 10px; " class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-xs-7">
+                    <h1> Ingrese los datos del producto</h1><br>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="inputNombre" class="control-label col-xs-2">
+                   Nombre*
+                </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" name="nombre" id="inputNombre" placeholder="Nombre" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="imputBrand" class="control-label col-xs-2">
+                    Marca*
+                </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" name="marca" id="imputBrand" placeholder="Marca" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputModel" class="control-label col-xs-2">
+                    Modelo*
+                </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" name="modelo" id="inputModel" placeholder="Modelo" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputQuantity" class="control-label col-xs-2">
+                    Cantidad*
+                </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="number" name="cantidad" id="inputQuantity" placeholder="Cantidad" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPrice" class="control-label col-xs-2">
+                    Precio*
+                </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="number" name="precio" id="inputPrice" placeholder="Precio" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputImage" class="control-label col-xs-2">
+                    Imagen*
+                </label>
+                <div class="col-xs-5">
+                    <input type="file" name="imagen" id="inputImage" placeholder="Imagen">
+                </div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-10">
+                <input type="submit" class="btn btn-primary" value="ENVIAR">
+            </div>
+        </form>
+
+    <div class="row cold-md-2">
+        <button type="button" class="btn btn-primary" onclick='window.location="/";'>Regresar</button>
+    </div>
+    </div>
+</body>
+
+</html>
