@@ -19,6 +19,6 @@ var server = http.createServer(function(req, res) {
 
 });
 
-server.listen(config.PORT, config.IP, function() {
-    console.log(`> Server escuchando en http://${config.IP}:${config.PORT}`.info);
+server.listen(config.PORT, function() {
+    console.log(`> Server escuchando`.info);
 });
