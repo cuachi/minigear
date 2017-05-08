@@ -1,9 +1,9 @@
 const mongo = require('mongodb').MongoClient,
-      config = require('../config/config');
+    config = require('../config/config'),
+    fs = require('fs');
 
 var url = config.db;
-
-exports.mongoIn = function (data, res) {
+exports.mongoIn = function(data, res) {
     mongo.connect(url, function(err, db) {
         if (err) {
             res.end(`<script>
@@ -52,10 +52,11 @@ exports.mongoIn = function (data, res) {
             });
         }
     });
-};
+}
 
-exports.mongoShow = function (res){
+exports.mongoShow = function(res) {
     mongo.connect(url, function(err, db) {
+        if (err) console.log(err);
         fs.readFile('./static/index.html', 'utf-8', function(err, content) {
             var collection = db.collection('inventario');
             collection.find().toArray(function(err, items) {
@@ -82,5 +83,4 @@ exports.mongoShow = function (res){
         });
 
     });
-};
-
+}

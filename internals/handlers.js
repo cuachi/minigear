@@ -2,7 +2,6 @@ const staticServer = require('./static-server'),
     querystring = require('querystring'),
     util = require('util'),
     formidable = require('formidable'),
-    fs = require('fs'),
     db = require('./db');
 
 
@@ -38,8 +37,7 @@ var getitems = function(req, res) {
     res.writeHead(200, {
         "Content-Type": "text/html"
     });
-
-    db.mongoshow(res);
+    db.mongoShow(res);
 }
 
 var handlers = {};
