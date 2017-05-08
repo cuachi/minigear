@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
-    "url": "#"
+    "url": "https://github.com/cuachi/minigear"
   },
   "keywords": [
     "server",
@@ -18,13 +19,12 @@
   ],
   "author": "@Cuachi",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^1.11.0"
-  },
   "dependencies": {
     "colors": "^1.1.2",
     "formidable": "^1.1.1",
     "mime": "^1.3.4",
-    "mongodb": "^2.2.26"
+    "mongodb": "^2.2.26",
+    "bower": "^1.8.0"
+
   }
 }

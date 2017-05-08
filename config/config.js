@@ -7,5 +7,9 @@ module.exports = {
         "error": "red",
         "warning": "yellow"
     },
-    "STATIC_PATH": "./static"
+    "STATIC_PATH": "./static",
+    'db' : 'mongodb://admin_cu:barret43@ds043388.mlab.com:43388/inventario'
 };
+
+
+exports.db;
