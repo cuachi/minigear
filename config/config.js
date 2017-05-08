@@ -1,7 +1,6 @@
 module.exports = {
-    "IP": process.env.IP || '127.0.0.1',
     "PORT": process.env.PORT || 12000,
-    'db' :  process.env.DB||'mongodb://localhost:27017/pwpc',
+    'db' :  'mongodb://admin_cu:barret43@ds043388.mlab.com:43388/inventario',
     "color_theme": {
         "info": "rainbow",
         "data": "green",
@@ -10,6 +9,3 @@ module.exports = {
     },
     "STATIC_PATH": "./static"
 };
-
-
-exports.db;
